@@ -1,0 +1,23 @@
+//sum function
+void sum(int a,int b)
+{
+  cout<<"sum - "<<a+b<<endl;
+}
+
+//subtraction
+void sub  (int a,int b)
+{
+  cout<<"subtraction - "<<a-b<<endl;
+}
+
+//multiply
+void multiply(int a,int b)
+{
+  cout<<"multiply - "<<a*b<<endl;
+}
+
+//divide
+void divide(int a,int b)
+{
+  cout<<"divide - "<<a*b<<endl;
+}
