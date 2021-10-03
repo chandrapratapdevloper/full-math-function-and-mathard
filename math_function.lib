@@ -28,3 +28,9 @@ int power(int a,int b)
   return(a);
   return(a*power(a,--b));
 }
+
+Int fib(int n){
+   If(n==1)
+       Return 1;
+   Return n* fib(--n);
+{
