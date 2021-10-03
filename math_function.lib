@@ -21,3 +21,10 @@ void divide(int a,int b)
 {
   cout<<"divide - "<<a*b<<endl;
 }
+// power function
+int power(int a,int b)
+{
+ if(b==1)
+  return(a);
+  return(a*power(a,--b));
+}
