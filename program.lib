@@ -1,0 +1,19 @@
+sum(int a,int b)
+{
+  return a+b;
+}
+
+substraciton(int a,int b)
+{
+  return a-b;
+}
+
+multiply(int a,int b)
+{
+  return a*b;
+}
+
+divide(int a,int b)
+{
+  return a/b;
+}
