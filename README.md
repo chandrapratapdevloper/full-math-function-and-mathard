@@ -30,3 +30,9 @@
 ### Power function(number,pow)
 
 ```
+## reverse
+The reverse method take a string and length return the reverse string.
+```c
+char revstring = reverse("ABC", 3);
+printf("%s", revstring");
+```
