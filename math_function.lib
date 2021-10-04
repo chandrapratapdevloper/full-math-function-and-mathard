@@ -1,32 +1,50 @@
 //sum function
 void sum(int a,int b)
 {
-  cout<<"sum - "<<a+b<<endl;
+  return a+b;
 }
 
 //subtraction
 void sub  (int a,int b)
 {
-  cout<<"subtraction - "<<a-b<<endl;
+  return a-b;
 }
 
 //multiply
 void multiply(int a,int b)
 {
-  cout<<"multiply - "<<a*b<<endl;
+  return a*b;
 }
 
 //divide
 void divide(int a,int b)
 {
-  cout<<"divide - "<<a*b<<endl;
+  return a/b;
 }
 // power function
 int power(int a,int b)
 {
  if(b==1)
   return(a);
-  return(a*power(a,--b));
+ return(a*power(a,--b));
+}
+
+Int fac(int n){
+   If(n==1)
+       Return 1;
+   Return n* fib(--n);
+{
+
+int fib(int a,int b = 0,c = 1,d = 1)
+{
+  if(a == 0)
+    return d;
+   return(fib(--a,c,d,b+c));
+}
+
+string strrev(string str)
+{
+  return(str.revrse(str)); 
 }
 // squre
 int squre(int num)
