@@ -29,8 +29,15 @@ int power(int a,int b)
   return(a*power(a,--b));
 }
 
-Int fib(int n){
+Int fac(int n){
    If(n==1)
        Return 1;
    Return n* fib(--n);
 {
+
+int fib(int a,int b = 0,c = 1,d = 1)
+{
+  if(a == 0)
+    return d;
+   return(fib(--a,c,d,b+c));
+}
