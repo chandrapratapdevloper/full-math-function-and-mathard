@@ -28,3 +28,8 @@ int power(int a,int b)
   return(a);
   return(a*power(a,--b));
 }
+// squre
+int squre(int num)
+{
+ return num*num;
+}
