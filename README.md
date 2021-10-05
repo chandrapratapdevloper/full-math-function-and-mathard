@@ -30,9 +30,19 @@
 ### Power function(number,pow)
 
 ```
+
+#### Squre
+'''
+// squre(int num)
+//return(num*num);
+* Ex->
+* // squre(5);
+* Answer= 25
+'''
+=======
 ## reverse
 The reverse method take a string and length return the reverse string.
-```c
+```
 char revstring = reverse("ABC", 3);
 printf("%s", revstring");
 ```

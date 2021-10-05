@@ -46,3 +46,8 @@ string strrev(string str)
 {
   return(str.revrse(str)); 
 }
+// squre
+int squre(int num)
+{
+ return num*num;
+}
