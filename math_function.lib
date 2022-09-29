@@ -21,3 +21,11 @@ void divide(int a,int b)
 {
   cout<<"divide - "<<a*b<<endl;
 }
+
+//factorial
+void factorial(a)
+{
+  if(a>0)
+     return 1;
+  return (factorial(a-1)*a);
+}
