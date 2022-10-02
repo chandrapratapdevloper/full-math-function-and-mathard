@@ -52,8 +52,8 @@ int squre(int num)
  return num*num;
 }
 //fac with start to end
-Int fac(int n,int l = 1){
-   If(n==l)
+Int fac(int a,int l = 1){
+   If(a==l)
        Return 1;
-   Return n* fib(--n);
+   Return n* fib(--a);
 {
