@@ -72,3 +72,30 @@ int power(int a,int p)
     return 1;
   return a*pow(a,p--)
 }
+
+int avkalan(ina a,int n)
+{
+  return n*pow(a,n-1);
+}
+
+int avkalan1(ina a,int n)
+{
+  return n*pow(n,n-1);
+}
+
+int avkalan2(ina a,int n)
+{
+  return a*pow(a,a-1);
+}
+
+int avkalan3(ina a,int n)
+{
+  return n*pow(a+a,n-1);
+}
+
+int avkalan4(ina a,int n)
+{
+  return 0;
+}
+
+
