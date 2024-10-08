@@ -1,101 +1,116 @@
-//sum function
-void sum(int a,int b)
-{
-  return a+b;
-}
+// this library makes your calculation code simple because, here is alot of function for calculation like 
+sum ,subsctract, multiply, divide,factor,power,fibonacci,string reverse,squre,,derivative,intrigerls ...
 
-//subtraction
-void sub  (int a,int b)
-{
-  return a-b;
-}
+#ifndef MATH_LIBRARY_H
+#define MATH_LIBRARY_H
 
-//multiply
-void multiply(int a,int b)
-{
-  return a*b;
-}
+#include <cmath>
+#include <algorithm>
+#include <stdexcept>
+#include <string>
 
-//divide
-void divide(int a,int b)
-{
-  return a/b;
-}
-// power function
-int power(int a,int b)
-{
- if(b==1)
-  return(a);
- return(a*power(a,--b));
-}
+class MathLibrary {
+public:
+    // Arithmetic operations
+    static double add(double a, double b) {
+        return a + b;
+    }
 
-Int fac(int n){
-   If(n==1)
-       Return 1;
-   Return n* fib(--n);
-{
+    static double subtract(double a, double b) {
+        return a - b;
+    }
 
-int fib(int a,int b = 0,c = 1,d = 1)
-{
-  if(a == 0)
-    return d;
-   return(fib(--a,c,d,b+c));
-}
+    static double multiply(double a, double b) {
+        return a * b;
+    }
 
-string strrev(string str)
-{
-  return(str.revrse(str)); 
-}
-// squre
-int squre(int num)
-{
- return num*num;
-}
-//fac with start to end
-Int fac(int a,int l = 1){
-   If(a==l)
-       Return 1;
-   Return n* fib(--a);
-{
+    static double divide(double a, double b) {
+        if (b == 0) {
+            throw std::invalid_argument("Division by zero");
+        }
+        return a / b;
+    }
 
-//power
-int pow(int a,int p)
-{
-  if(p==0
-    return 1;
-  return a*pow(a,p--)
-}
+    // Ceiling and floor
+    static double ceil(double a) {
+        return std::ceil(a);
+    }
 
-int power(int a,int p)
-{
-  if(p==0)
-    return 1;
-  return a*pow(a,p--)
-}
+    static double floor(double a) {
+        return std::floor(a);
+    }
 
-int avkalan(ina a,int n)
-{
-  return n*pow(a,n-1);
-}
+    // Maximum and minimum
+    static double maximum(double a, double b) {
+        return std::max(a, b);
+    }
 
-int avkalan1(ina a,int n)
-{
-  return n*pow(n,n-1);
-}
+    static double minimum(double a, double b) {
+        return std::min(a, b);
+    }
 
-int avkalan2(ina a,int n)
-{
-  return a*pow(a,a-1);
-}
+    // Power and square
+    static double power(double base, double exp) {
+        return std::pow(base, exp);
+    }
 
-int avkalan3(ina a,int n)
-{
-  return n*pow(a+a,n-1);
-}
+    static double square(double a) {
+        return multiply(a, a);
+    }
 
-int avkalan4(ina a,int n)
-{
-  return 0;
-}
+    // Factorial
+    static unsigned long long factorial(int n) {
+        if (n < 0) {
+            throw std::invalid_argument("Factorial of negative number is undefined");
+        }
+        unsigned long long result = 1;
+        for (int i = 1; i <= n; ++i) {
+            result *= i;
+        }
+        return result;
+    }
 
+    // Fibonacci
+    static unsigned long long fibonacci(int n) {
+        if (n < 0) {
+            throw std::invalid_argument("Fibonacci of negative number is undefined");
+        }
+        if (n == 0) return 0;
+        if (n == 1) return 1;
 
+        unsigned long long a = 0, b = 1, c;
+        for (int i = 2; i <= n; ++i) {
+            c = a + b;
+            a = b;
+            b = c;
+        }
+        return b;
+    }
+
+    // String reversal
+    static std::string reverseString(const std::string& str) {
+        return std::string(str.rbegin(), str.rend());
+    }
+
+    // Power m to n
+    static double powerMToN(double m, double n) {
+        return std::pow(m, n);
+    }
+
+    // Derivative (approximation)
+    static double derivative(double (*func)(double), double x, double h = 1e-5) {
+        return (func(x + h) - func(x - h)) / (2 * h);
+    }
+
+    // Integral (approximation using the trapezoidal rule)
+    static double integral(double (*func)(double), double a, double b, int n = 1000) {
+        double step = (b - a) / n;
+        double area = 0.5 * (func(a) + func(b));
+        for (int i = 1; i < n; ++i) {
+            area += func(a + i * step);
+        }
+        return area * step;
+    }
+};
+
+#endif // MATH_LIBRARY_H
