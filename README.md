@@ -42,6 +42,10 @@
     - **Derivative**: `derivative(double (*func)(double), double x, double h)`: Approximates the derivative of `func` at point `x` using central difference.
     - **Integral**: `integral(double (*func)(double), double a, double b, int n)`: Approximates the integral of `func` from `a` to `b` using the trapezoidal rule.
 
+6. **Matrix Operations in C++**:
+    - **Matrix Multiplication**: Multiplies two matrices.
+    - **Determinant Calculation**: Computes the determinant of a square matrix.
+
 ## How to Run
 
 ### Step 1: Create the Header File
@@ -83,6 +87,10 @@ public:
     static double derivative(double (*func)(double), double x, double h = 1e-5);
     
     static double integral(double (*func)(double), double a, double b, int n = 1000);
+
+    static std::vector<std::vector<double>> multiply(const std::vector<std::vector<double>>& A, const std::vector<std::vector<double>>& B);
+    static double determinant(const std::vector<std::vector<double>>& matrix);
+
 };
 
 #endif // MATH_LIBRARY_H
